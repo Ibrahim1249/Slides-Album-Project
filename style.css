@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.material-icons {
+    font-size: 1.75rem;
+}
+
+#action-bar {
+    background-color: rgb(165, 177, 189);
+    height: 6vh;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    /* position:fixed;
+    width: 100%; */
+}
+
+#content {
+    display: flex;
+    height: 94vh;
+}
+
+#content-list {
+    width: 15vw;
+    background-color: lightblue;
+    padding: 5px;
+    overflow-y: scroll;
+    border-right: 4px solid black;
+  
+}
+
+
+#content-details {
+    width: 85vw;
+    background-color: rgb(127, 167, 167);
+   
+}
+
+#action-bar span {
+    margin: 0.5rem;
+    border: 1px solid rgb(15, 15, 15);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#action-bar select {
+    margin: 0.5rem;
+    border: 1px solid rgb(15, 15, 15);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    background-color: rgb(165, 177, 189);
+    font-weight: 700;
+    height: 3vh;
+}
+
+#action-bar select option {
+    background-color: lightgray;
+
+}
+
+#action-bar span:hover {
+    border: 2px solid rgb(90, 86, 86);
+    transform: scale(1.05);
+    background-color: azure;
+}
+
+#overlay {
+    /* this position fixed / relative will be based on browser window. with this property we have to used top,left property; */
+    position: fixed;
+    height: 94vh;
+    width: 100vw;
+    background-color: rgb(145, 136, 136);
+    top: 6vh;
+    left: 0%;
+    opacity: 0.5;
+    z-index: 2;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+#play-overlay{
+    position: fixed;
+    height: 94vh;
+    width: 100vw;
+    background-color: rgb(145, 136, 136);
+    top: 6vh;
+    left: 0%;
+    opacity: 0.5;
+    z-index: 2;
+    display: none;
+}
+#play-overlay #text{
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    top: -3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    line-height: 100px;
+    vertical-align: middle;
+
+    /* horizontally align text within div  */
+    text-align: center;
+    text-decoration: underline;
+}
+
+#content-detail-overlay {
+    display: none;
+    position: fixed;
+    height: 94vh;
+    width: 100vw;
+    background-color: rgb(145, 136, 136);
+    top: 6vh;
+    left: 15vw;
+    opacity: 0.5;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text {
+    /* this position absolute will be based on parent position .it start with parent posotion */
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* vertically aligning text within div  */
+    line-height: 100px;
+    vertical-align: middle;
+
+    /* horizontally align text within div  */
+    text-align: center;
+    text-decoration: underline;
+}
+
+#new-slide {
+    height: 120px;
+
+    background-color: rgb(166, 209, 162);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+#new-slide:hover {
+    transform: scale(1.05);
+}
+
+#content-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+#create-slide {
+    display: none;
+    height: 70vh;
+    width: 50vw;
+    background-color: rgb(189, 231, 189);
+    border: 2px solid black;
+  
+    padding: 25px;
+    border-radius: 5px;
+
+
+}
+
+
+#show-slide {
+    display: none;
+  
+}
+
+#savebtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+
+}
+
+#savebtn button {
+    font-size: 15px;
+    background-color: lightslategray;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 4vh;
+    color: white;
+    width: 5vw;
+    font-weight: 600;
+}
+#savebtn button:hover {
+    background-color: rgb(18, 30, 43);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px gray;
+    border: 2px solid rgb(220, 236, 74);
+}
+.slide-position{
+    display: flex;
+    justify-content: center;
+}
+.slide-position > input{
+    width: 45vw;
+    height: 4.5vh;
+    margin: 12px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.slide-position textarea{
+    height: 40vh;
+    width: 45vw;
+    margin: 12px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.slides{
+    height: 150px;
+    background-color: rgb(166, 209, 162);
+
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+.slides:hover{
+    transform: scale(1.03);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    opacity: 0.8;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    height: 15%;
+    /* border-bottom: 2px solid rgb(39, 37, 37); */
+    font-weight: 700;
+}
+.side-content{
+    height: 85%;
+    display: flex;
+}
+.desc{
+    width: 47%;
+    height: 92%;
+    margin: 5px;
+    font-size: 13px;
+     text-align: start; 
+     /* justify */
+background-color: lightcyan;
+    border-radius: 5px;
+    border: 2px solid rgb(87, 83, 83);
+    padding: 3px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.side-content img{
+margin-top: 5px;
+    width: 47%;
+    height: 92%;
+    border-radius: 8px;
+    border: 2px solid gray;
+}
+
+
+/* ********************************************** */
+.slides-in-view{
+    height: 94vh;
+    width: 85vw;
+    background-color: rgb(166, 209, 162);
+    /* margin: 10px; */
+    padding: 8px;
+}
+.slides-in-view .slide-header{
+    display: flex;
+    justify-content: center;
+   
+    height: 10%;
+    border-bottom: 2px solid rgb(39, 37, 37);
+    padding-top: 10px;
+}
+.slides-in-view .slide-header .title{
+    width: 98%;
+    font-weight: 700;
+    font-size: 45px;
+}
+.slides-in-view .slide-header span{
+    padding: 10px 5px;
+    color: rgb(117, 114, 114);
+    cursor: pointer;
+}
+.slides-in-view .slide-header span:hover{
+    text-decoration: underline;
+    color: black;
+   
+}
+
+.slides-in-view .side-content{
+    height: 90%;
+    display: flex;
+
+}
+
+
+.slides-in-view .desc{
+    width: 50%;
+    height: 99%;
+    margin: 5px;
+    font-size: 20px;
+    background-color: lightcyan;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    border: 2px solid black;
+}
+.slides-in-view .side-content img{
+/* margin-top: 5px; */
+width: 50%;
+height: 99%;
+margin-left: 5px;
+ border: 2px solid black;
+ border-radius: 8px;
+} 
+#uploadFile{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
